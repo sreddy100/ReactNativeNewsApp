@@ -1,12 +1,10 @@
 import React, { useState } from 'react';  
 import { View, Text, Button, StyleSheet, TextInput, FlatList, ActivityIndicator, Image } from 'react-native';  
-import { createAppContainer } from 'react-navigation';  
-import { createStackNavigator } from 'react-navigation-stack';  
 // import { SafeAreaProvider } from 'react-native-safe-area-context';
 // import { useSafeArea } from 'react-native-safe-area-context';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
-class ProfileScreen extends React.Component {  
+class NewsScreen extends React.Component {  
 
     constructor(props){
         super(props);
@@ -95,7 +93,6 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     item: {
-        flex: 1,
         height: 220,
         marginHorizontal: 10,
          width: 350,
@@ -107,8 +104,9 @@ const styles = StyleSheet.create({
         borderWidth: 2,
       },
     boxItem: {
-        flex: 1,
+        
         flexDirection: 'row',
+        flexWrap: 'wrap',
         width: 300,
         height: 200,
         // borderColor: 'black',
@@ -123,8 +121,10 @@ const styles = StyleSheet.create({
         borderWidth: 1,
     },
     headingText: {
-        fontSize: 28,
-        fontWeight: 'bold'
+        fontSize: 24,
+        fontWeight: 'bold',
+        flexWrap: 'wrap'
+
     },
     bodyText: {
         margin: 0,
@@ -154,4 +154,4 @@ const styles = StyleSheet.create({
     
 });
 
-export default ProfileScreen
+export default NewsScreen

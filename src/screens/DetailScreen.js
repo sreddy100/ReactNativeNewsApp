@@ -1,10 +1,7 @@
 import React, { useState } from 'react';  
 import { View, Text, Button, StyleSheet, TextInput, FlatList, ActivityIndicator, Image } from 'react-native';  
-import { createAppContainer } from 'react-navigation';  
-import { createStackNavigator } from 'react-navigation-stack';  
 // import { SafeAreaProvider } from 'react-native-safe-area-context';
 // import { useSafeArea } from 'react-native-safe-area-context';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 
 
 

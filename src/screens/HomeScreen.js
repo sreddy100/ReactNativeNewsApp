@@ -1,12 +1,8 @@
 import React, { useState } from 'react';  
 import { View, Text, Button, StyleSheet, TextInput, FlatList, ActivityIndicator, Image } from 'react-native';  
-import { createAppContainer } from 'react-navigation';  
-import { createStackNavigator } from 'react-navigation-stack';  
 // import { SafeAreaProvider } from 'react-native-safe-area-context';
 // import { useSafeArea } from 'react-native-safe-area-context';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 
-//import customData from './article_list.json';
 
 class HomeScreen extends React.Component {  
 
@@ -44,8 +40,8 @@ class HomeScreen extends React.Component {
                         value = {this.state.password}
               />
               <Button  
-                  title="Go to Profile"  
-                  onPress={() => this.props.navigation.push('Profile')}  
+                  title="Go to News"  
+                  onPress={() => this.props.navigation.push('NewsList')}  
               />  
           </View>  
       );  

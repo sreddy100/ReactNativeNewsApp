@@ -6,7 +6,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 // import { useSafeArea } from 'react-native-safe-area-context';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import hScreen from './src/screens/HomeScreen.js';
-import ProfileScreen from './src/screens/ProfileScreen.js';
+import NewsScreen from './src/screens/NewsScreen.js';
 import DetailScreen from './src/screens/DetailScreen.js';
 
 
@@ -16,7 +16,7 @@ import DetailScreen from './src/screens/DetailScreen.js';
 const AppNavigator = createStackNavigator(  
   {  
       Home: hScreen,  
-      Profile: ProfileScreen,
+      NewsList: NewsScreen,
       Detail: DetailScreen
   },  
   {  
