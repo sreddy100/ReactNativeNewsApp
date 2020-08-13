@@ -1,21 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';  
+import { View, Text, Button, StyleSheet, TextInput, FlatList, ActivityIndicator, Image } from 'react-native';  
+import { createAppContainer } from 'react-navigation';  
+import { createStackNavigator } from 'react-navigation-stack';  
+// import { SafeAreaProvider } from 'react-native-safe-area-context';
+// import { useSafeArea } from 'react-native-safe-area-context';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import hScreen from './src/screens/HomeScreen.js';
+import ProfileScreen from './src/screens/ProfileScreen.js';
+import DetailScreen from './src/screens/DetailScreen.js';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
+
+
+const AppNavigator = createStackNavigator(  
+  {  
+      Home: hScreen,  
+      Profile: ProfileScreen,
+      Detail: DetailScreen
+  },  
+  {  
+      initialRouteName: "Home"  
+  }  
+);  
+
+const AppContainer = createAppContainer(AppNavigator);  
+export default class App extends React.Component {  
+  render() {  
+      return <AppContainer />;  
+  }  
+}  
